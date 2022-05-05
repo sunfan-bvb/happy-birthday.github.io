@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算题</title>
+</head>
+<body style="background-color: #F8CB2E;">
+    <img src="./images/back-black.png" style="margin: 3vh 0 0 5vw; width: 5vh; height: 5vh;" onclick="back()"/>
+    <h1>计算题</h1>
+    <table style="border-collapse:separate; border-spacing:0px 5vh;">
+        <tr>
+            <td>
+                <img style="width: 4vh; height: 4vh; margin-left: 5vw;" src="./images/left.png"/>
+            </td>
+            <td>
+                <div class="audio">
+                    <img src="./images/还是记得你星座.JPG" class="img" id="message1">
+                    <!-- <input style="margin-left: 1vw; width: 8vw; border-width: 3px;" onchange="change(this.value, 1)"></input> -->
+                    <div style="margin-left: 1vw; width: 8vw; border-width: 3px;">还是记得你星座</div>
+                    <img src="./images/play-yellow.png" class="img-control" onclick="control(1)" id="img1">
+                    <audio src="./musics/还是记得你星座.mp3" loop="true" id="music1">
+                    </audio>
+                </div>
+            </td>
+            <td>
+                <img style="width: 3vh; height: 3vh; margin-left: 4.5vw;" src="./images/sub.png"/>
+            </td>
+            <td>
+                <div class="audio">
+                    <img src="./images/在月台上等你.JPG" class="img" id="message2">
+                    <!-- <input style="margin-left: 1vw; width: 8vw;border-width: 3px;" onchange="change(this.value, 2)"></input> -->
+                    <div style="margin-left: 1vw; width: 8vw; border-width: 3px;">在月台上等你</div>
+                    <img src="./images/play-yellow.png" class="img-control" onclick="control(2)" id="img2">
+                    <audio src="./musics/在月台上等你.mp3" loop="true" id="music2">
+                    </audio>
+                </div>
+            </td>
+            <td>
+                <img style="width: 3vh; height: 3vh; margin-left: 4.5vw;" src="./images/add.png"/>
+            </td>
+            <td>
+                <div class="audio">
+                    <img src="./images/梦伴.JPG" class="img" id="message3">
+                    <!-- <input style="margin-left: 1vw; width: 8vw;border-width: 3px;" onchange="change(this.value, 3)"></input> -->
+                    <div style="margin-left: 1vw; width: 8vw; border-width: 3px;">梦伴</div>
+                    <img src="./images/play-yellow.png" class="img-control" onclick="control(3)" id="img3">
+                    <audio src="./musics/梦伴.mp3" loop="true" id="music3">
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img style="width: 3vh; height: 3vh; margin-left: 5vw;" src="./images/sub.png"/>
+            </td>            <td>
+                <div class="audio">
+                    <img src="./images/床头床尾.JPG" class="img" id="message4">
+                    <!-- <input style="margin-left: 1vw; width: 8vw;border-width: 3px;" onchange="change(this.value, 4)"></input> -->
+                    <div style="margin-left: 1vw; width: 8vw; border-width: 3px;">床头床尾</div>
+                    <img src="./images/play-yellow.png" class="img-control" onclick="control(4)" id="img4">
+                    <audio src="./musics/床头床尾.mp3" loop="true" id="music4">
+                    </audio>
+                </div>
+            </td>
+            <td>
+                <img style="width: 3vh; height: 3vh; margin-left: 4.5vw;" src="./images/add.png"/>
+            </td>
+            <td>
+                <div class="audio">
+                    <img src="./images/雨天没有你.JPG" class="img" id="message5">
+                    <!-- <input style="margin-left: 1vw; width: 8vw;border-width: 3px;" onchange="change(this.value, 5)"></input> -->
+                    <div style="margin-left: 1vw; width: 8vw; border-width: 3px;">雨天没有你</div>
+                    <img src="./images/play-yellow.png" class="img-control" onclick="control(5)" id="img5">
+                    <audio src="./musics/雨天没有你.mp3" loop="true" id="music5">
+                    </audio>
+                </div>
+            </td>
+            <td>
+                <img style="width: 4vh; height: 4vh; margin-left: 2vw;" src="./images/right.png"/>
+                <img style="width: 3vh; height: 3vh; margin-left: 1vw;" src="./images/divide.png"/>
+            </td>
+            <td>
+                <div class="audio">
+                    <img src="./images/交叉神经.JPG" class="img" id="message6">
+                    <!-- <input style="margin-left: 1vw; width: 8vw;border-width: 3px;" onchange="change(this.value, 6)"></input> -->
+                    <div style="margin-left: 1vw; width: 8vw; border-width: 3px;">交叉神经</div>
+                    <img src="./images/play-yellow.png" class="img-control" onclick="control(6)" id="img6">
+                    <audio src="./musics/交叉神经.mp3" loop="true" id="music6">
+                    </audio>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div style="text-align: center; margin-top: 10vh; font-size: xx-large;">
+        = ?
+    </div>
+</body>
+</html>
+<style>
+    .img{
+        width: 4vw;
+        height: 4vw;
+        margin-left: 1vw;
+    }
+    .audio{
+        width: 20vw;
+        height: 5vw;
+        background-color: white;
+        opacity: 0.75;
+        display: flex;
+        align-items: center;
+        margin-left: 4.5vw;
+    }
+    .img-control{
+        width: 2vw;
+        height: 2vw;
+        margin-left: 1vw;
+    }
+    h1{
+        margin-top: 10vh;
+        margin-bottom: 12vh;
+        text-align: center;
+    }
+</style>
+<script>
+    function control(index){
+        var control_l =[]
+        var music_l = []
+        for(let i = 1; i <=6; i++){
+            control_l.push(document.getElementById("img"+i.toString()))
+            music_l.push(document.getElementById("music"+i.toString()))
+        }
+        for(let i = 0; i < 6; i++){
+            if(i == index-1){
+                if(music_l[i].paused){
+                    control_l[i].src = "./images/pause-yellow.png"
+                    music_l[i].play()
+                }else{
+                    control_l[i].src = "./images/play-yellow.png"
+                    music_l[i].pause()
+                }
+            }else{
+                control_l[i].src = "./images/play-yellow.png"
+                music_l[i].pause()
+            }
+        }
+    }
+    function back(){
+        window.location.href="index.html"
+    }
+</script>

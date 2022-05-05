@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐</title>
+</head>
+<body>
+    <div class="blue" onclick="toone()">1</div>
+    <div class="text" onclick="totext()">玩法介绍</div>
+    <div class="yellow" onclick="totwo()">2</div>
+    <div class="orange" onclick="tothree()">3</div>
+</body>
+</html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .blue{
+        width: 50%;
+        height: 50vh; 
+        font-size: 10vh;
+        line-height: 50vh;
+        text-align: center;
+        background-color: #006E7F;
+        float: left;
+        /* text-shadow: 0 0 20px white, 0 0 20px white; */
+        -webkit-text-stroke:3px white;
+        -webkit-text-fill-color:#006E7F;
+    }
+    .blue:hover{
+        -webkit-animation: bluemove 1s;
+        animation: bluemove 1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes bluemove
+    {
+        from {font-size: 10vh;}
+        to {font-size: 18vh;}
+    }
+    
+    @-webkit-keyframes bluemove
+    {
+        from {font-size: 10vh;}
+        to {font-size: 18vh;}
+    }
+
+    .yellow{
+        width: 50%;
+        height: 50vh; 
+        background-color: #F8CB2E;
+        float: left;
+        font-size: 10vh;
+        line-height: 50vh;
+        text-align: center;
+        -webkit-text-stroke:3px white;
+        -webkit-text-fill-color:#F8CB2E;
+    }
+
+    .yellow:hover{
+        -webkit-animation: bluemove 1s;
+        animation: bluemove 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .orange{
+        width: 50%;
+        height: 50vh; 
+        background-color: #EE5007;
+        float: left;
+        font-size: 10vh;
+        line-height: 50vh;
+        text-align: center;
+        -webkit-text-stroke:3px white;
+        -webkit-text-fill-color:#EE5007;
+    }
+
+    .orange:hover{
+        -webkit-animation: bluemove 1s;
+        animation: bluemove 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .text{
+        width: 50%;
+        height: 50vh; 
+        font-size: 10vh;
+        line-height: 50vh;
+        text-align: center;
+        background-color: #B22727;
+        float: left;
+        /* text-shadow: 0 0 20px white, 0 0 20px white; */
+        -webkit-text-stroke:3px white;
+        -webkit-text-fill-color:#B22727;
+    }
+    .text:hover{
+        -webkit-animation: textmove 1s;
+        animation: textmove 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes textmove
+    {
+        from {font-size: 10vh;}
+        to {font-size: 15vh;}
+    }
+    
+    @-webkit-keyframes textmove
+    {
+        from {font-size: 10vh;}
+        to {font-size: 15vh;}
+    }
+
+</style>
+
+<script>
+    function toone(){
+        window.location.href="one.html"
+    }
+    function totwo(){
+        window.location.href="two.html"
+    }
+    function tothree(){
+        window.location.href="three.html"
+    }
+    function totext(){
+        window.location.href="text.html"
+    }
+</script>

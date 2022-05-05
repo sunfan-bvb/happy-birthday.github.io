@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>听歌识曲</title>
+</head>
+<body style="background-color: #006E7F;">
+    <img src="./images/back.png" style="margin: 3vh 0 0 5vw; width: 5vh; height: 5vh;" onclick="back()"/>
+    <h1>听歌识曲<h1>
+    <text style="font-size: medium;">将歌曲名填入对应输入空格中。请根据所有歌曲名推测第一个数字。</text>
+    <div style="height:1px; width:100%; background-color: white;"></div>
+    <!-- <div class="flow-wave"></div> -->
+    <table style="border-collapse:separate; border-spacing:0px 10vh;">
+        <tr>
+            <td>
+                <div class="audio">
+                    <img src="./images/music.png" class="img" id="message1">
+                    <input style="margin-left: 1vw; width: 8vw; border-width: 3px;" onchange="change(this.value, 1)"></input>
+                    <img src="./images/play.png" class="img-control" onclick="control(1)" id="img1">
+                    <audio src="./musics/一千零一个.mp3" loop="true" id="music1">
+                    </audio>
+                </div>
+            </td>
+            <td>
+                <div class="audio">
+                    <img src="./images/music.png" class="img" id="message2">
+                    <input style="margin-left: 1vw; width: 8vw;border-width: 3px;" onchange="change(this.value, 2)"></input>
+                    <img src="./images/play.png" class="img-control" onclick="control(2)" id="img2">
+                    <audio src="./musics/一丝不挂.mp3" loop="true" id="music2">
+                    </audio>
+                </div>
+            </td>
+            <td>
+                <div class="audio">
+                    <img src="./images/music.png" class="img" id="message3">
+                    <input style="margin-left: 1vw; width: 8vw;border-width: 3px;" onchange="change(this.value, 3)"></input>
+                    <img src="./images/play.png" class="img-control" onclick="control(3)" id="img3">
+                    <audio src="./musics/一走了之.mp3" loop="true" id="music3">
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="audio">
+                    <img src="./images/music.png" class="img" id="message4">
+                    <input style="margin-left: 1vw; width: 8vw;border-width: 3px;" onchange="change(this.value, 4)"></input>
+                    <img src="./images/play.png" class="img-control" onclick="control(4)" id="img4">
+                    <audio src="./musics/最后一次.mp3" loop="true" id="music4">
+                    </audio>
+                </div>
+            </td>
+            <td>
+                <div class="audio">
+                    <img src="./images/music.png" class="img" id="message5">
+                    <input style="margin-left: 1vw; width: 8vw;border-width: 3px;" onchange="change(this.value, 5)"></input>
+                    <img src="./images/play.png" class="img-control" onclick="control(5)" id="img5">
+                    <audio src="./musics/一.mp3" loop="true" id="music5">
+                    </audio>
+                </div>
+            </td>
+            <td>
+                <div class="audio">
+                    <img src="./images/music.png" class="img" id="message6">
+                    <input style="margin-left: 1vw; width: 8vw;border-width: 3px;" onchange="change(this.value, 6)"></input>
+                    <img src="./images/play.png" class="img-control" onclick="control(6)" id="img6">
+                    <audio src="./musics/一想到你.mp3" loop="true" id="music6">
+                    </audio>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+<style>
+    .img{
+        width: 4vw;
+        height: 4vw;
+        margin-left: 1vw;
+    }
+    .audio{
+        width: 20vw;
+        height: 5vw;
+        background-color: white;
+        opacity: 0.75;
+        display: flex;
+        align-items: center;
+        margin-left: 10vw;
+    }
+    .img-control{
+        width: 2vw;
+        height: 2vw;
+        margin-left: 1vw;
+    }
+    h1{
+        margin-top: 10vh;
+        margin-bottom: 8vh;
+        text-align: center;
+        color: white;
+    }
+</style>
+<script>
+    function control(index){
+        var control_l =[]
+        var music_l = []
+        for(let i = 1; i <=6; i++){
+            control_l.push(document.getElementById("img"+i.toString()))
+            music_l.push(document.getElementById("music"+i.toString()))
+        }
+        for(let i = 0; i < 6; i++){
+            if(i == index-1){
+                if(music_l[i].paused){
+                    control_l[i].src = "./images/pause.png"
+                    music_l[i].play()
+                }else{
+                    control_l[i].src = "./images/play.png"
+                    music_l[i].pause()
+                }
+            }else{
+                control_l[i].src = "./images/play.png"
+                music_l[i].pause()
+            }
+        }
+    }
+    function change(value, index){
+        let l = ["一千零一个", "一丝不挂", "一走了之", "最后一次", "一", "一想到你"]
+        let msg = document.getElementById("message"+index.toString())
+        if(value == l[index-1]){
+            msg.src = "./images/ok.png"
+        }else{
+            msg.src = "./images/error.png"
+        }
+    }
+    function back(){
+        window.location.href="index.html"
+    }
+</script>
